@@ -1,0 +1,15 @@
+@import "./_main.css";
+
+@import "./components/Global/_button.css";
+
+
+@import "./pages/_home.css";
+@import "./pages/_detail.css";
+@import "./components/Global/_header.css";
+
+@import "./components/Global/_information.css";
+
+@import "./components/Country/_country.css";
+@import "./components/Country/_countryCard.css";
+@import "./components/Details/_details.css";
+@import "./components/Filter/_filter.css";

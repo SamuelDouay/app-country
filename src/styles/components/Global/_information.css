@@ -1,0 +1,7 @@
+p {
+    width: 100%;
+}
+
+p span {
+    font-weight: bold;
+}
