@@ -1,7 +1,3 @@
-p {
-    width: 100%;
-}
-
-p span {
-    font-weight: bold;
+span {
+  font-weight: bold;
 }

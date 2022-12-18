@@ -38,10 +38,10 @@ const DetailCard = ({ country }) => {
         </div>
         <div id="border_country_countainer">
           <span>Border Country : </span>
-          {country.borders != null ? (
-            country.borders.map((border, index) => (
-              <BorderCountry key={index} countryCode={border} />
-            ))
+          {country.borders != null ? ( 
+          <div> {country.borders.map((border, index) => (
+            <BorderCountry key={index} countryCode={border} />
+          ))} </div >
           ) : (
             <p>Pas de pays à côté (Le pays est problablement une île)</p>
           )}

@@ -14,16 +14,16 @@ const FilterHome = ({filterRegionFunction, filterSearchFunction}) => {
     return (
         <div id="header_componant">
             <div id="searchContainer">
-                <Button type='text' placeholder={'Rechercher un pays'} filterSearchValue={handleChangeSearch}/>
+                <Button type='text' placeholder={'Search for a country'} filterSearchValue={handleChangeSearch}/>
             </div>
             <div id="filterCountry">
                 <select name="country" id="country_select" onChange={handleChangeRegion}>
-                    <option className="region_filter" value="all">Tous les pays</option>
-                    <option className="region_filter" value="Africa">Afrique</option>
-                    <option className="region_filter" value="Americas">Amérique</option>
-                    <option className="region_filter" value="Asia">Asie</option>
-                    <option className="region_filter" value="Europe">Europe</option>
-                    <option className="region_filter" value="Oceania">Oceanie</option>
+                    <option className="region_filter" value="all">All continents</option>
+                    <option className="region_filter" value="Africa">Africa</option>
+                    <option className="region_filter" value="Americas">America</option>
+                    <option className="region_filter" value="Asia">Asia</option>
+                    <option className="region_filter" value="Europe">Europa</option>
+                    <option className="region_filter" value="Oceania">Oceania</option>
                 </select>
             </div>
         </div>
