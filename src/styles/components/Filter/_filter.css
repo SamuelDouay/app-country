@@ -1,6 +1,7 @@
 #header_componant {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -44,12 +45,11 @@ select {
     0 0.2rem 0.1rem rgb(0 0 0 / 5%);
 }
 
-select option {
+option {
   font-size: 15px;
   background: var(--color-element);
   box-shadow: 0 0.25rem 0.75rem rgb(0 0 0 / 10%),
     0 0.2rem 0.1rem rgb(0 0 0 / 5%);
-  border-radius: none;
 }
 
 #header_componant input[type="button"] {
