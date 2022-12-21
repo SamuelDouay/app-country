@@ -13,12 +13,14 @@
   overflow: hidden;
   height: 400px;
   width: 560px;
+  border: 0.005rem solid rgba(144, 144, 144, 0.082);
+  border-radius: 0.5rem;
   box-shadow: 0 0.25rem 0.75rem rgb(0 0 0 / 10%),
     0 0.2rem 0.1rem rgb(0 0 0 / 5%);
 }
 
 #image_detail img {
-  object-fit: cover;
+  object-fit: contain;
   height: 100%;
   width: 100%;
 }
