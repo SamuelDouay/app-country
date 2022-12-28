@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  row-gap: 2rem;
+  row-gap: 3rem;
   align-items: center;
   justify-content: space-between;
   width: 100%;
@@ -69,3 +69,11 @@
   row-gap: 0.5rem;
   width: 70%;
 }
+
+
+@media screen and (max-width: 1450px) {
+  #detail_container {
+    justify-content: center;
+  }
+}
+

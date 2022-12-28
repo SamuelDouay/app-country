@@ -19,8 +19,12 @@ const Country = ({ filterRegion, filterSearch }) => {
   }
 
   function filterBySearch(country) {
-    return country.translations.fra.common.toLowerCase().includes(filterSearch.toLowerCase())
+    return toNormalForm(country.translations.fra.common.toLowerCase()).includes(toNormalForm(filterSearch.toLowerCase()))
   }
+
+  function toNormalForm(str) {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
 
   return (
     <div id="countries_container">
