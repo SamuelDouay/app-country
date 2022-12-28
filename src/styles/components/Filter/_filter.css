@@ -5,12 +5,12 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 8rem;
+  height: 10rem;
 }
 
 #searchContainer {
   height: 3.5rem;
-  width: 30rem;
+  width: 25rem;
   border-radius: 0.4rem;
   display: flex;
   flex-direction: row-reverse;
@@ -62,4 +62,11 @@ option {
 
 select:hover {
   background: var(--color-hover-button);
+}
+
+
+@media screen and (max-width: 690px) {
+  #header_componant {
+    margin: 2rem;
+  }
 }
