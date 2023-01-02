@@ -11,7 +11,7 @@ const CountryCard = ({ country }) => {
         <div className="info_country">
           <Information section="Population" valeur={country.population.toLocaleString()} />
           <Information section="Region" valeur={country.region} />
-          <Information section="Capital" valeur={country.capital} />
+          <Information section="Capital" valeur={country.capital?country.capital[0]:'Pas de capital'} />
         </div>
       </div>
     </div>

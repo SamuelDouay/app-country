@@ -30,11 +30,11 @@ const DetailCard = ({ country }) => {
             section="Population"
             valeur={country.population.toLocaleString()}
           />
-          <Information section="Currencies" valeur={getCurrencieName()} />
+          <Information section="Currencies" valeur={country.currencies?getCurrencieName():'Pas de money'} />
           <Information section="Region" valeur={country.region} />
-          <Information section="Language" valeur={getLanguage()} />
+          <Information section="Language" valeur={country.languages?getLanguage():'Pas de langage'} />
           <Information section="Sub Region" valeur={country.subregion} />
-          <Information section="Capital" valeur={country.capital} />
+          <Information section="Capital" valeur={country.capital?country.capital[0]:'Pas de capital'} />
         </div>
         <div id="border_country_countainer">
           <span>Border Country : </span>

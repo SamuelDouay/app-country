@@ -1,4 +1,5 @@
 import Button from "../Global/Button";
+import { ReactComponent as Search } from "../../assets/images/loupe_white.svg"
 
 const FilterHome = ({filterRegionFunction, filterSearchFunction}) => {
 
@@ -14,6 +15,7 @@ const FilterHome = ({filterRegionFunction, filterSearchFunction}) => {
     return (
         <div id="header_componant">
             <div id="searchContainer">
+                <Search />
                 <Button type='text' placeholder={'Search for a country'} filterSearchValue={handleChangeSearch}/>
             </div>
             <div id="filterCountry">
