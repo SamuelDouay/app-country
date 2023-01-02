@@ -5,7 +5,7 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 ## Links 🔗
 
 - Solution URL : [Repository](https://github.com/SamuelDouay/app-country)
-- Live Site URL : [NetliFy](https://app-country-samy.netlify.app/)
+- Live Site URL : [Netlify](https://app-country-samy.netlify.app/)
 
 ## The challenge 💻
 
