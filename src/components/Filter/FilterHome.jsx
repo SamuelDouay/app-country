@@ -1,7 +1,14 @@
 import Button from "../Global/Button";
-import { ReactComponent as Search } from "../../assets/images/loupe_white.svg"
+import { ReactComponent as SearchLigth } from "../../assets/images/loupe_white.svg"
+import { ReactComponent as SearchDarck } from "../../assets/images/loupe_black.svg"
+import { useEffect, useState } from "react";
 
 const FilterHome = ({filterRegionFunction, filterSearchFunction}) => {
+    const [darckMode, setDarckMode] = useState(false);
+
+    useEffect(() => {
+        setDarckMode(localStorage.getItem('darkMode').includes('Ligth'))
+    }, []);
 
     function handleChangeRegion(event) {
         filterRegionFunction(event.target.value);
@@ -11,11 +18,10 @@ const FilterHome = ({filterRegionFunction, filterSearchFunction}) => {
         filterSearchFunction(recherche);
     }
 
-
     return (
         <div id="header_componant">
             <div id="searchContainer">
-                <Search />
+                {darckMode?<SearchDarck/>:<SearchLigth/>}
                 <Button type='text' placeholder={'Search for a country'} filterSearchValue={handleChangeSearch}/>
             </div>
             <div id="filterCountry">

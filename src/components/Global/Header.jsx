@@ -4,6 +4,7 @@ const Header = () => {
 
   function handleChangeColor(darkMode) {
     colorMode(darkMode);
+    localStorage.setItem('darkMode', darkMode);
   }
 
   function colorMode(darkMode) {
