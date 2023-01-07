@@ -1,10 +1,10 @@
 import Button from "./Button";
 
-const Header = () => {
-
+const Header = ({ darkModeSvg }) => {
   function handleChangeColor(darkMode) {
     colorMode(darkMode);
-    localStorage.setItem('darkMode', darkMode);
+    darkModeSvg(darkMode);
+    localStorage.setItem("darkMode", darkMode);
   }
 
   function colorMode(darkMode) {
@@ -31,7 +31,11 @@ const Header = () => {
     <header>
       <div id="header">
         <h1>Where in the world ?</h1>
-        <Button type="button" value="Light Mode" darkModeValue={handleChangeColor}/>
+        <Button
+          type="button"
+          value="Light Mode"
+          darkModeValue={handleChangeColor}
+        />
       </div>
     </header>
   );

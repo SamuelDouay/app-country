@@ -2,7 +2,7 @@ import { useState } from "react";
 import Country from "../components/Country/Country";
 import FilterHome from "../components/Filter/FilterHome";
 
-const Home = () => {
+const Home = (svg) => {
   const [filterRegion, setFilterRegion] = useState('all');
   const [filterSearch, setFilterSearch] = useState('');
 
@@ -16,7 +16,7 @@ const Home = () => {
 
   return (
     <section id="homePage">
-      <FilterHome filterRegionFunction={handleRegionFilter} filterSearchFunction={handleSearchFilter}/>
+      <FilterHome filterRegionFunction={handleRegionFilter} filterSearchFunction={handleSearchFilter} changeSvg={svg}/>
       <Country filterRegion={filterRegion} filterSearch={filterSearch}/>
     </section>
   );
