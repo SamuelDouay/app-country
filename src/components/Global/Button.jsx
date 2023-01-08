@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { ReactComponent as MoonLigth } from "../../assets/images/moon_white.svg";
+import { ReactComponent as MoonDarck } from "../../assets/images/moon_black.svg";
 
 const Button = ({
   type,
@@ -9,19 +11,25 @@ const Button = ({
   placeholder,
   filterSearchValue,
   darkModeValue,
+  isHeader,
 }) => {
   const navigate = useNavigate();
   const [path, setPath] = useState();
-  const [themeMode, seThemeMode] = useState('');
+  const [moon, setMoon] = useState(<MoonLigth />);
+  const [valueMode, setValueMode] = useState(value);
 
   useEffect(() => {
     navigate(path);
   }, [path, navigate]);
 
-  const navigation = (event) => {
+  const navigation = () => {
     setPath(chemin);
-    darkMode(event.target.value);
   };
+
+  const headerOnClick = () => {
+    darkMode(valueMode);
+  };
+
 
   function handleChangeSearch(event) {
     filterSearchValue(event.target.value);
@@ -29,32 +37,37 @@ const Button = ({
 
   function darkMode(mode) {
     if (mode === "Light Mode") {
-      seThemeMode("Dark Mode");
+      setMoon(<MoonDarck/>);
       darkModeValue(mode);
+      setValueMode("Dark Mode");
     }
 
     if (mode === "Dark Mode") {
-      seThemeMode("Light Mode");
+      setMoon(<MoonLigth/>);
       darkModeValue(mode);
+      setValueMode("Light Mode");
     }
   }
 
-  function setValue(value) {
-    if (themeMode === '') {
-      return value;
+  function render(isHeader) {
+    if (!isHeader) {
+      return (
+        <input
+          type={type}
+          value={value}
+          placeholder={placeholder}
+          onClick={navigation}
+          onChange={handleChangeSearch}
+        />
+      );
     }
-    return themeMode;
+    return (
+      <button type={type} onClick={headerOnClick}>
+        {moon}{valueMode}
+      </button>
+    );
   }
-
-  return (
-    <input
-      type={type}
-      value={setValue(value)}
-      placeholder={placeholder}
-      onClick={navigation}
-      onChange={handleChangeSearch}
-    />
-  );
+  return render(isHeader);
 };
 
 export default Button;

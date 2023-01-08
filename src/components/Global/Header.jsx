@@ -35,6 +35,7 @@ const Header = ({ darkModeSvg }) => {
           type="button"
           value="Light Mode"
           darkModeValue={handleChangeColor}
+          isHeader={true}
         />
       </div>
     </header>
